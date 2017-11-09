@@ -18,16 +18,90 @@ header {
   z-index: 4;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+  @media screen and (min-width: 1001px) {
+    justify-content: flex-end;
+  }
+
+  .logo-mob {
+    display: block;
+    transform: translate(-50%, 0);
+
+    @media screen and (min-width: 1001px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 50%;
+
+      img {
+        width: 100%; 
+      }
+    }
+  }
+
+  .makeorder {
+    display: block;
+    color: #fff;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: $ff-thin;
+    letter-spacing: 9px;
+    position: relative;
+
+    @media screen and (min-width: 1001px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      height: 20px;
+      width: 3px;
+      background-color: rgba(#fff, .6);
+      left: 50%;
+      top: -50px;
+      content: '';
+      transform: translate(-50%, 0);
+    }
+
+    &::after {
+      top: -30px;
+      width: 17px;
+      height: 17px;
+      background-color: #fff;
+      content: '';
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
 
   .translate {
     color: #fff;
     font-family: $ff-thin;
-    margin-right: 40px;
+    margin-right: -48px;
     cursor: pointer;
-    font-size: .92em;
+    font-size: 3.05em;
     line-height: .92;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1001px) {
+      margin-right: 40px;
+      cursor: pointer;
+      font-size: .92em;
+      line-height: .92;
+      margin-bottom: 6px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 1.5em;
+    }
 
     span.active {
       font-family: $ff-bold;
@@ -55,24 +129,44 @@ header {
         &::after {
           content: '';
           position: absolute;
-          height: 7px;
-          width: 7px;
-          top: 47%;
           transform: translate(0, 0);
           background-color: #fff;
           border-radius: 50%;
+          height: 17px;
+          width: 17px;
+          top: 44%;
+
+          @media screen and (min-width: 1001px) {
+            height: 7px;
+            width: 7px;
+            top: 47%;
+          }
+
+          @media screen and (max-width: 480px) {
+            height: 10px;
+            width: 10px;
+            top: 42%;
+          }
         }
       }
 
       &.ru {
         &::after {
-          right: 0;
+          right: -7px;
+
+          @media screen and (min-width: 1001px) {
+            right: 0;
+          }
         }
       }
 
       &.en {
         &::after {
-          left: 0;
+          left: -7px;
+
+          @media screen and (min-width: 1001px) {
+            left: 0;
+          }
         }
       }
     }
@@ -80,6 +174,11 @@ header {
 
   .sound {
     cursor: pointer;
+    display: none;
+
+    @media screen and (min-width: 1001px) {
+      display: block;
+    }
   }
 }
 

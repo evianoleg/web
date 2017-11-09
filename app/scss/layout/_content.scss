@@ -26,9 +26,14 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        display: none;
 
         @media screen and (max-width: 1600px) {
           width: 30%;
+        }
+
+        @media screen and (min-width: 1001px) {
+          display: block;
         }
       }
 
@@ -38,6 +43,11 @@
         position: absolute;
         right: 83px;
         top: 140px;
+        display: none;
+
+        @media screen and (min-width: 1001px) {
+          display: block;
+        }
 
         &::before {
           position: absolute;
@@ -62,6 +72,11 @@
         width: 50%;
         height: 100%;
         box-shadow: 35px 0 40px rgba(0, 0, 0, .5);
+        display: none;
+
+        @media screen and (min-width: 1001px) {
+          display: block;
+        }
 
         .logo {
           &.start {
@@ -84,7 +99,7 @@
             transform: translate(0, -50%);
 
             @media screen and (max-width: 1600px) {
-            	right: -30%;
+              right: -30%;
               width: 30%;
 
               img {
@@ -236,7 +251,7 @@
     @media screen and (-ms-high-contrast: active),
     (-ms-high-contrast: none) {
       body {
-        min-height: 100hv;
+        min-height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
