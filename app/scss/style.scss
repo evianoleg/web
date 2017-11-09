@@ -1,0 +1,19 @@
+@import "base/reset";
+@import "base/fonts";
+@import "base/inputs";
+@import "utils/variables";
+
+/* Node modules */
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+/* Components & Layouts */
+
+//@import "components/_jquery.formstyler";
+//@import "components/_fancybox";
+@import "components/slick";
+//@import "components/_mCustomScrollbar";
+@import "layout/header";
+//@import "layout/footer";
+@import "layout/content";
+@import "layout/media";
+

@@ -1,0 +1,20 @@
+input {
+  border: 1px solid;
+  border-color: #b9b8bd;
+  box-shadow: none;
+  padding: 13px 7px;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+
+  &::placeholder {
+    font-size: 1.19em;
+    line-height: 100%;
+    color: #aaa;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $accent-color;
+  }
+}
