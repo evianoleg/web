@@ -7,20 +7,80 @@
 header {
   background: transparent;
   width: 100%;
-  height: 155px;
   min-width: $min-width;
-  max-width: 1243px;
+  max-width: 100%;
+  padding: 0 83px;
   text-align: left;
   margin: 0 auto;
   order: 1;
+  height: 140px;
   -webkit-order: 1;
+  background: transparent;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-  .wrapper {
-    padding: 0;
-    display: flex;
-    flex-flow: column nowrap;
+  .translate {
+    color: #fff;
+    font-family: $ff-thin;
+    margin-right: 40px;
+    cursor: pointer;
+    font-size: .92em;
+    line-height: .92;
+
+    span.active {
+      font-family: $ff-bold;
+    }
+
+    .tumbler {
+      width: 25px;
+      margin: 0 5px;
+      display: inline-block;
+      position: relative;
+      height: 1em;
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        top: 63%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(#fff, .7);
+      }
+
+      &.en,
+      &.ru {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 7px;
+          width: 7px;
+          top: 47%;
+          transform: translate(0, 0);
+          background-color: #fff;
+          border-radius: 50%;
+        }
+      }
+
+      &.ru {
+        &::after {
+          right: 0;
+        }
+      }
+
+      &.en {
+        &::after {
+          left: 0;
+        }
+      }
+    }
   }
 
+  .sound {
+    cursor: pointer;
+  }
 }
 
 
