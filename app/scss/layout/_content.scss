@@ -26,6 +26,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @media screen and (max-width: 1600px) {
+          width: 30%;
+        }
       }
 
       .sideline__right {
@@ -63,15 +67,39 @@
           &.start {
             position: absolute;
             top: 50%;
-            right: 50px;
+            width: 100%;
             transform: translate(0, -50%);
+            padding-right: 50px;
+            text-align: right;
+
+            img {
+              display: inline-block;
+            }
           }
 
           &.end {
             position: absolute;
             top: 50%;
-            left: 100%;
+            right: -115px;
             transform: translate(0, -50%);
+
+            @media screen and (max-width: 1600px) {
+            	right: -30%;
+              width: 30%;
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+          &.start,
+          &.end {
+            img {
+              @media screen and (max-width: 1600px) {
+                width: 45%;
+              }
+            }
           }
         }
 
@@ -115,13 +143,6 @@
         }
       }
 
-      .wrapper {
-        min-width: $min-width;
-        max-width: $max-width;
-        padding: 0 40px 0 40px;
-        margin: 0 auto;
-        position: relative;
-      }
       /* titles */
       p {
         @include font($base-font-size,

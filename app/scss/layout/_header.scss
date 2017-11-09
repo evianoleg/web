@@ -15,7 +15,6 @@ header {
   order: 1;
   height: 140px;
   -webkit-order: 1;
-  background: transparent;
   z-index: 4;
   display: flex;
   align-items: center;
@@ -28,6 +27,7 @@ header {
     cursor: pointer;
     font-size: .92em;
     line-height: .92;
+    margin-bottom: 6px;
 
     span.active {
       font-family: $ff-bold;
