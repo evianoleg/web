@@ -1,0 +1,170 @@
+.tab {
+  &__title {
+    text-transform: uppercase;
+    font-family: $ff-bold !important;
+    font-size: 2.7em !important;
+  }
+
+  &__text {
+    &-title {
+      font-size: 19px !important;
+      padding-bottom: 0px !important;
+    }
+
+    &-desc {
+      line-height: 2.6 !important;
+      opacity: .5;
+    }
+  }
+
+  &__links {
+    text-align: right;
+    border-top: 2px solid #2e2e30;
+    padding-top: 17px;
+    margin-top: 23px;
+
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      opacity: .6;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:last-child {
+        margin-left: 30px;
+
+        @media screen and (max-width: 1000px) {
+          margin: 0 30px;
+        }
+      }
+    }
+  }
+  
+  .text {
+    @media screen and (max-width: 1000px) {
+      padding: 30px;
+    }
+  }
+}
+
+
+.tabimgs {
+  position: absolute;
+  right: 83px;
+  height: 100%;
+  max-height: 800px;
+  align-items: center;
+  width: calc(100% - 900px);
+  justify-content: center;
+  top: 143px;
+
+  display: none;
+
+  @media screen and (min-width: 1001px) {
+    display: flex;
+  }
+
+  @media screen and (max-width: 1300px) {
+    width: calc(100% - 750px);
+  }
+
+  z-index: 9999;
+}
+
+.tabimg {
+  position: relative;
+
+  @media screen and (max-width: 1640px) {
+    .tabimg__title,
+    .btn {
+      display: none;
+    }
+  }
+
+  &.web {
+    padding-right: 280px;
+
+    .tabimg__title {
+      position: absolute;
+      top: 0;
+      right: -46px;
+      width: 300px;
+      top: 45%;
+    }
+
+    .btn {
+      top: 63%;
+      right: 105px;
+    }
+
+    @media screen and (max-width: 1640px) {
+      padding-right: 0;
+      width: auto;
+      
+      .tabimg__code {
+        display: none;
+      }
+
+      .tabimg__decoration {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1400px) {
+      .tabimg__img {
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  &__title {
+    background: transparent url('../img/dots_bg2.png') center top repeat-y;
+    padding: 10px;
+    padding-bottom: 30px;
+    width: 300px;
+
+    h2 {
+      font-family: $ff-bold !important;
+      font-size: 4.2em !important;
+    }
+
+    .subtitle {
+      font-family: $ff-ultralight !important;
+      color: #fff !important;
+      text-transform: uppercase;
+      font-size: 2.5em !important;
+      letter-spacing: 7px;
+      position: absolute;
+      white-space: nowrap;
+    }
+  }
+
+  &__img {
+    z-index: 10;
+    position: relative;
+  }
+
+  &__code {
+    position: absolute;
+    top: 0;
+    left: 390px;
+  }
+
+  &__decoration {
+    position: absolute;
+    z-index: 1;
+    left: 360px;
+    width: 48%;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    img {
+      width: 100%;
+    }
+  }
+}

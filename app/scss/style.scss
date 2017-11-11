@@ -3,8 +3,11 @@
 @import "base/inputs";
 @import "utils/variables";
 
+
 /* Node modules */
+
 @import "../../node_modules/font-awesome/scss/font-awesome";
+
 
 /* Components & Layouts */
 
@@ -16,5 +19,18 @@
 @import "layout/footer";
 @import "layout/aside";
 @import "layout/content";
+@import "layout/production";
 @import "layout/media";
 
+.btn {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #ac9200;
+  padding: 11px 12px 9px;
+  display: inline-block;
+  font-family: $ff-bold;
+
+  &:hover {
+    background-color: #af9044;
+  }
+}

@@ -7,6 +7,7 @@
   padding-bottom: 80px;
   display: flex;
   align-items: center;
+  z-index: 10;
 
   &.nothome {
     align-items: flex-start;
@@ -32,13 +33,65 @@
       padding: 0;
     }
 
-    &.righted {
+    &.production {
+      .mobileimg {
+        display: block;
+        text-align: center;
+        width: 100%;
+
+        .btn {
+          background-color: tomato;
+          display: block !important;
+          margin: 20px auto;
+          width: 140px;
+        }
+
+        img {
+          display: inline-block;
+          max-width: 400px;
+          width: 100%;
+        }
+
+        @media screen and (min-width: 1001px) {
+          display: none;
+        }
+      }
       @media screen and (min-width: 1001px) {
         margin: 0 auto 0 0;
-        max-width: 620px;
+        max-width: 795px;
         padding: 0;
         padding-left: 170px;
-        margin-top: 36px;
+        margin-top: 15px;
+      }
+
+      @media screen and (max-width: 1300px) {
+        max-width: 620px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        max-width: 100%;
+        padding: 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+
+        .tabs {
+          .btn {
+            display: none;
+
+            &.mobile {
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      .makeorder {
+        margin: 50px 0;
+        width: 100%;
+        text-align: center;
       }
     }
 
@@ -82,13 +135,23 @@
 
     .sidetitle {
       padding: 0;
-      background: transparent url('../img/dots_bg2.png') center top repeat;
+      background: transparent url('../img/dots_bg2.png') center top repeat-x;
 
       h2 {
         padding-top: 0 !important;
         font-family: $ff-bold;
         font-size: 75px !important;
-        padding-bottom: 27px !important;
+        padding-bottom: 9px !important;
+        line-height: 1 !important;
+
+        @media screen and (max-width: 1000px) {
+          margin-left: 40px;
+        }
+
+        @media screen and (max-width: 480px) {
+          font-size: 55px !important;
+          margin-left: 10px;
+        }
       }
 
       h4.subtitle {
@@ -96,6 +159,70 @@
         font-family: $ff-ultralight;
         font-size: 34px;
         letter-spacing: 4px;
+
+        @media screen and (max-width: 1000px) {
+          margin-left: 40px;
+        }
+
+        @media screen and (max-width: 480px) {
+          font-size: 28px !important;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .sidemenu {
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid  #2e2e30;
+        padding: 15px 0;
+        margin-top: 18px;
+
+        @media screen and (max-width: 1000px) {
+          justify-content: space-around;
+        }
+
+        @media screen and (max-width: 480px) {
+          flex-wrap: wrap;
+
+          li {
+            margin: 0 6px;
+          }
+        } 
+
+        li {
+          a {
+            color: #484848;
+            text-transform: uppercase;
+            transition: all .25s ease-in-out;
+            font-size: 9px;
+            letter-spacing: 4px;
+          }
+
+          &.active,
+          &:hover {
+            a {
+              color: #fff;
+              font-family: $ff-bold;
+            }
+          }
+        }
+      }
+    }
+
+    .tabs {
+      padding-left: 105px;
+      margin-top: 56px;
+      padding-bottom: 50px;
+
+      @media screen and (max-width: 1000px) {
+        margin-top: 0;
+      }
+
+      @media screen and (max-width: 1300px) {
+        padding-left: 0;
       }
     }
   }
