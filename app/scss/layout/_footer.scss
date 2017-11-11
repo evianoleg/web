@@ -18,6 +18,10 @@ footer {
 			display: inline-block;
 			cursor: pointer;
 		}
+
+		@media screen and (min-width: 1001px) {
+			display: none;
+		}
  	}
 
   @media screen and (min-width: 1001px) {
@@ -27,6 +31,7 @@ footer {
     order: 3;
     -webkit-order: 3;
     position: relative;
+    bottom: initial;
   }
 
   .wrapper {

@@ -78,6 +78,11 @@
           display: block;
         }
 
+        &.nothome {
+          background: transparent;
+          box-shadow: none;
+        }
+
         .logo {
           &.start {
             position: absolute;
