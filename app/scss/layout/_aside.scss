@@ -8,6 +8,10 @@
   display: flex;
   align-items: center;
 
+  &.nothome {
+    align-items: flex-start;
+  }
+
   aside {
     height: inherit;
     width: 100%;
@@ -26,6 +30,16 @@
       margin: 0 0 0 auto;
       max-width: 445px;
       padding: 0;
+    }
+
+    &.righted {
+      @media screen and (min-width: 1001px) {
+        margin: 0 auto 0 0;
+        max-width: 620px;
+        padding: 0;
+        padding-left: 170px;
+        margin-top: 36px;
+      }
     }
 
     &::before {
@@ -63,6 +77,25 @@
 
       @media screen and (min-width: 1001px) {
         display: none;
+      }
+    }
+
+    .sidetitle {
+      padding: 0;
+      background: transparent url('../img/dots_bg2.png') center top repeat;
+
+      h2 {
+        padding-top: 0 !important;
+        font-family: $ff-bold;
+        font-size: 75px !important;
+        padding-bottom: 27px !important;
+      }
+
+      h4.subtitle {
+        text-transform: uppercase;
+        font-family: $ff-ultralight;
+        font-size: 34px;
+        letter-spacing: 4px;
       }
     }
   }
