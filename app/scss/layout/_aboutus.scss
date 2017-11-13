@@ -54,19 +54,19 @@ section.sidebar {
     width: 83%;
     order: 1;
 
-    @media screen and (max-width: 500px) {
-      padding: 0 20px;
+    @media screen and (max-width: 1300px) {
+      width: 82%;
     }
 
     @media screen and (max-width: 1000px) {
       order: 2;
-      width: 100%;
+      width: 100% !important;
       max-width: 100%;
       padding: 0 80px;
     }
 
-    @media screen and (max-width: 1300px) {
-      width: 82%;
+    @media screen and (max-width: 500px) {
+      padding: 0 20px; 
     }
 
     h2 {
