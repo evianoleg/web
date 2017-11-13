@@ -1,6 +1,6 @@
 section.sidebar {
   display: flex;
-  
+
   @media screen and (max-width: 1000px) {
     flex-direction: column;
   }
@@ -29,7 +29,7 @@ section.sidebar {
     justify-content: space-between;
     max-width: calc(100% - 650px);
     padding-left: 30px;
-    align-items: center;  
+    align-items: center;
 
     @media screen and (min-width: 1700px) {
       justify-content: space-around;
@@ -52,10 +52,11 @@ section.sidebar {
   .prefs {
     max-width: 620px;
     padding-right: 30px;
+    width: 83%;
     order: 1;
 
-    @media screen and (max-width: 1300px) {
-      width: 70%;
+    @media screen and (max-width: 500px) {
+      padding: 0 20px;
     }
 
     @media screen and (max-width: 1000px) {
@@ -65,8 +66,8 @@ section.sidebar {
       padding: 0 80px;
     }
 
-    @media screen and (max-width: 500px) {
-      padding: 0 20px;
+    @media screen and (max-width: 1300px) {
+      width: 82%;
     }
 
     h2 {
@@ -118,8 +119,6 @@ section.sidebar {
           display: none;
         }
       }
-
-
     }
 
     .pref {
@@ -159,12 +158,6 @@ section.sidebar {
 
     @media screen and (max-height: 700px) {
       min-height: 500px;
-
-      .num {
-        &__desc {
-          font-size: .4em !important;
-        }
-      }
     }
 
     @media screen and (max-width: 1000px) {
@@ -190,6 +183,10 @@ section.sidebar {
         height: 1px;
         left: 0;
         top: -10px;
+      }
+
+      @media screen and (max-height: 700px), screen and (min-width: 1001px) {
+        left: -5px;
       }
     }
 
@@ -227,7 +224,7 @@ section.sidebar {
         letter-spacing: 4px;
         transform: rotate(-90deg) translate(10%);
         top: 50%;
-        left: -90px;
+        left: -65px;
 
         @media screen and (max-width: 1000px) {
           position: relative;
@@ -236,6 +233,12 @@ section.sidebar {
           top: initial;
           left: initial;
           transform: translate(0) rotate(0);
+        }
+
+        @media screen and (max-height: 700px) {
+          letter-spacing: 1px;
+          font-size: .5rem;
+          left: -45px;
         }
       }
     }

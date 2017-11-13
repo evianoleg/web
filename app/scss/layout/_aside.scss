@@ -156,6 +156,10 @@
           font-size: 55px !important;
           margin-left: 10px;
         }
+
+        @media screen and (max-height: 700px), screen and (min-width: 1001px) {
+          font-size: 40px !important;
+        }
       }
 
       h4.subtitle {
@@ -172,6 +176,10 @@
           font-size: 28px !important;
           margin-left: 10px;
         }
+
+        @media screen and (max-height: 700px), screen and (min-width: 1001px) {
+          font-size: 24px !important;
+        }
       }
     }
 
@@ -180,7 +188,7 @@
         list-style: none;
         display: flex;
         justify-content: space-between;
-        border-top: 1px solid  #2e2e30;
+        border-top: 1px solid #2e2e30;
         padding: 15px 0;
         margin-top: 18px;
 
@@ -194,7 +202,7 @@
           li {
             margin: 0 6px;
           }
-        } 
+        }
 
         li {
           a {

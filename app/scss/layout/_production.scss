@@ -3,6 +3,11 @@
     text-transform: uppercase;
     font-family: $ff-bold !important;
     font-size: 2.7em !important;
+
+    @media screen and (max-height: 700px), screen and (min-width: 1001px) {
+      font-size: 2.3em !important;
+      padding: 5px 0 !important;
+    }
   }
 
   &__text {
@@ -46,7 +51,7 @@
       }
     }
   }
-  
+
   .text {
     @media screen and (max-width: 1000px) {
       padding: 30px;
@@ -107,7 +112,7 @@
     @media screen and (max-width: 1640px) {
       padding-right: 0;
       width: auto;
-      
+
       .tabimg__code {
         display: none;
       }
