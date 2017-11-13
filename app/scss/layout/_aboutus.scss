@@ -35,17 +35,16 @@ section.sidebar {
       justify-content: space-around;
     }
 
-    @media screen and (max-width: 1000px) {
-      width: 100%;
-      max-width: 100%;
-    }
-
     @media screen and (max-width: 1300px) {
       justify-content: space-between;
     }
 
     @media screen and (max-width: 1000px) {
       flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      margin: 0;
     }
   }
 
