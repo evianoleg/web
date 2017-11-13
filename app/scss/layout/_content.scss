@@ -155,6 +155,10 @@
           width: 155px;
           left: 83px;
 
+          @media screen and (max-width: 1700px) {
+            display: none;
+          }
+
           span {
             width: 100%;
             height: 100%;

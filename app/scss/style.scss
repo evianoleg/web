@@ -20,6 +20,7 @@
 @import "layout/aside";
 @import "layout/content";
 @import "layout/production";
+@import "layout/aboutus";
 @import "layout/media";
 
 .btn {
@@ -33,4 +34,8 @@
   &:hover {
     background-color: #af9044;
   }
+}
+
+body[role=aboutus] {
+  //overflow-y: hidden; 
 }

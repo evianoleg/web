@@ -1,0 +1,224 @@
+section.sidebar {
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+
+  .aboutus {
+    order: 1;
+
+    .tab {
+      &__links {
+        @media screen and (max-width: 1000px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  .right-block {
+    order: 2;
+    flex: 1 0 auto;
+    margin-right: 85px;
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: space-around;
+    max-width: calc(100% - 650px);
+
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 1300px) {
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+
+  .prefs {
+    max-width: 620px;
+    width: 58%;
+    order: 1;
+
+    @media screen and (max-width: 1300px) {
+      width: 70%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      order: 2;
+      width: 100%;
+      max-width: 100%;
+      padding: 0 80px;
+    }
+
+    @media screen and (max-width: 500px) {
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-weight: 700;
+      padding: 0 !important;
+      text-transform: uppercase;
+      margin-top: 15px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @media screen and (max-height: 940px) {
+        font-size: 24px !important;
+      }
+    }
+
+    p {
+      color: #555;
+      line-height: 1.9;
+      padding-top: 15px !important;
+
+      @media screen and (max-height: 940px) {
+        padding-top: 0 !important;
+      }
+
+      @media screen and (max-width: 1300px) {
+        line-height: 1.5;
+        padding-right: 20px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        line-height: 2;
+      }
+
+      &.desctop {
+        @media screen and (max-width: 1300px) {
+          display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+          display: block;
+        }
+      }
+
+      &.mob {
+        line-height: 1.9;
+        @media screen and (min-width: 1301px), screen and (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+
+    }
+
+    .pref {
+      &:last-child {
+        @media screen and (max-height: 940px), screen and (max-width: 1600px) {
+          display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .numbers {
+    order: 2;
+
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    @media screen and (min-height: 945px) {
+      min-height: 700px;
+    }
+
+    @media screen and (max-height: 944px) {
+      min-height: 550px;
+
+      .num {
+        font-size: 3.5em;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      order: 1;
+      flex-direction: row;
+      justify-content: center;
+      min-height: auto !important;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 30px 0;
+    }
+
+    &::before {
+      content: '';
+      width: 1px;
+      height: 101%;
+      background-color: rgba(#fff, .5);
+      position: absolute;
+      left: -20px;
+
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: -10px;
+      }
+    }
+
+    .num {
+      font-size: 5em;
+      font-family: $ff-bold;
+      text-align: left;
+      width: 100%;
+      position: relative;
+      text-align: center;
+
+      @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+      }
+
+      @media screen and (max-width: 1700px) {
+        font-size: 3em;
+      }
+
+      span {
+        @media screen and (max-width: 1000px) {
+          order: 2;
+          padding: 15px 0;
+        }
+      }
+
+      &-desc {
+        position: absolute;
+        font-size: .6rem;
+        opacity: .6;
+        font-family: $ff-light;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        transform: rotate(-90deg) translate(10%);
+        top: 50%;
+        left: -90px;
+
+        @media screen and (max-width: 1000px) {
+          position: relative;
+          order: 1;
+
+          top: initial;
+          left: initial;
+          transform: translate(0) rotate(0);
+        }
+      }
+    }
+  }
+}

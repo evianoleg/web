@@ -23,6 +23,10 @@
     padding-top: 17px;
     margin-top: 23px;
 
+    @media screen and (max-width: 1440px) {
+      margin-top: 0;
+    }
+
     a {
       color: #fff;
       text-transform: uppercase;
