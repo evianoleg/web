@@ -1,4 +1,6 @@
 section.sidebar {
+  display: flex;
+  
   @media screen and (max-width: 1000px) {
     flex-direction: column;
   }
@@ -21,10 +23,17 @@ section.sidebar {
     flex: 1 0 auto;
     margin-right: 85px;
     padding: 0 15px;
+    align-self: center;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: calc(100% - 650px);
+    padding-left: 30px;
+    align-items: center;  
+
+    @media screen and (min-width: 1700px) {
+      justify-content: space-around;
+    }
 
     @media screen and (max-width: 1000px) {
       width: 100%;
@@ -42,7 +51,7 @@ section.sidebar {
 
   .prefs {
     max-width: 620px;
-    width: 58%;
+    padding-right: 30px;
     order: 1;
 
     @media screen and (max-width: 1300px) {
@@ -145,6 +154,16 @@ section.sidebar {
 
       .num {
         font-size: 3.5em;
+      }
+    }
+
+    @media screen and (max-height: 700px) {
+      min-height: 500px;
+
+      .num {
+        &__desc {
+          font-size: .4em !important;
+        }
       }
     }
 
