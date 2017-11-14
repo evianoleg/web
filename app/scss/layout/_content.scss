@@ -20,6 +20,12 @@
       background: #222 url('../img/page_bg.png') center center no-repeat;
       background-size: cover;
 
+      section {
+        max-width: 1920px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
       .circle,
       .elipse {
         position: absolute;
@@ -74,7 +80,7 @@
         width: 100%;
         text-align: center;
 
-        img { 
+        img {
           display: inline-block;
           width: calc(100% - 276px);
         }
@@ -103,6 +109,10 @@
         &.nothome {
           background: transparent;
           box-shadow: none;
+        }
+
+        &.shadow {
+          background: transparent;
         }
 
         .logo {

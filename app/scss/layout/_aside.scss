@@ -16,8 +16,7 @@
     height: inherit;
     width: 100%;
     display: flex;
-    flex-flow: column nowrap;
-    //justify-content: space-between;
+    flex-flow: column nowrap; //justify-content: space-between;
     position: relative;
     padding: 0 20px 0 125px;
 
@@ -58,9 +57,13 @@
       }
       @media screen and (min-width: 1001px) {
         margin: 0 auto 0 0;
-        max-width: 770px;
+        max-width: 45%;
         padding: 0;
         padding-left: 170px;
+      }
+
+      @media screen and (min-width: 1701px) {
+        max-width: 770px;
       }
 
       @media screen and (max-width: 1700px) {
@@ -135,110 +138,112 @@
         display: none;
       }
     }
+  }
+}
 
-    .sidetitle {
-      padding: 0;
-      background: transparent url('../img/dots_bg2.png') center top repeat-x;
+.sidetitle {
+  padding: 0;
+  background: transparent url('../img/dots_bg2.png') center top repeat-x;
 
-      h2 {
-        padding-top: 0 !important;
-        font-family: $ff-bold;
-        font-size: 75px !important;
-        padding-bottom: 9px !important;
-        line-height: 1 !important;
+  h2 {
+    padding-top: 0 !important;
+    font-family: $ff-bold !important;
+    font-size: 75px !important;
+    padding-bottom: 9px !important;
+    line-height: 1 !important;
 
-        @media screen and (max-width: 1000px) {
-          margin-left: 40px;
-        }
+    @media screen and (max-width: 1000px) {
+      margin-left: 40px;
+    }
 
-        @media screen and (max-width: 480px) {
-          font-size: 55px !important;
-          margin-left: 10px;
-        }
+    @media screen and (max-width: 480px) {
+      font-size: 55px !important;
+      margin-left: 10px;
+    }
 
-        @media screen and (max-height: 700px), screen and (min-width: 1001px) {
-          font-size: 40px !important;
-        }
+    @media screen and (max-height: 700px),
+    screen and (min-width: 1001px) {
+      font-size: 40px !important;
+    }
+  }
+
+  h4.subtitle {
+    text-transform: uppercase;
+    font-family: $ff-ultralight;
+    font-size: 34px;
+    letter-spacing: 4px;
+
+    @media screen and (max-width: 1000px) {
+      margin-left: 40px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 28px !important;
+      margin-left: 10px;
+    }
+
+    @media screen and (max-height: 700px),
+    screen and (min-width: 1001px) {
+      font-size: 24px !important;
+    }
+  }
+}
+
+.sidemenu {
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #2e2e30;
+    padding: 15px 0;
+    margin-top: 18px;
+
+    @media screen and (max-width: 1000px) {
+      justify-content: space-around;
+    }
+
+    @media screen and (max-width: 480px) {
+      flex-wrap: wrap;
+
+      li {
+        margin: 0 6px;
       }
+    }
 
-      h4.subtitle {
+    li {
+      a {
+        color: #484848;
         text-transform: uppercase;
-        font-family: $ff-ultralight;
-        font-size: 34px;
+        transition: all .25s ease-in-out;
+        font-size: 9px;
         letter-spacing: 4px;
+      }
 
-        @media screen and (max-width: 1000px) {
-          margin-left: 40px;
-        }
-
-        @media screen and (max-width: 480px) {
-          font-size: 28px !important;
-          margin-left: 10px;
-        }
-
-        @media screen and (max-height: 700px), screen and (min-width: 1001px) {
-          font-size: 24px !important;
+      &.active,
+      &:hover {
+        a {
+          color: #fff;
+          font-family: $ff-bold;
         }
       }
     }
+  }
+}
 
-    .sidemenu {
-      ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        border-top: 1px solid #2e2e30;
-        padding: 15px 0;
-        margin-top: 18px;
+.tabs {
+  padding-left: 105px;
+  margin-top: 45px;
 
-        @media screen and (max-width: 1000px) {
-          justify-content: space-around;
-        }
+  @media screen and (max-width: 1000px) {
+    margin-top: 0;
+  }
 
-        @media screen and (max-width: 480px) {
-          flex-wrap: wrap;
+  @media screen and (max-width: 1700px) {
+    padding-left: 0;
+  }
 
-          li {
-            margin: 0 6px;
-          }
-        }
-
-        li {
-          a {
-            color: #484848;
-            text-transform: uppercase;
-            transition: all .25s ease-in-out;
-            font-size: 9px;
-            letter-spacing: 4px;
-          }
-
-          &.active,
-          &:hover {
-            a {
-              color: #fff;
-              font-family: $ff-bold;
-            }
-          }
-        }
-      }
-    }
-
-    .tabs {
-      padding-left: 105px;
-      margin-top: 45px;
-
-      @media screen and (max-width: 1000px) {
-        margin-top: 0;
-      }
-
-      @media screen and (max-width: 1700px) {
-        padding-left: 0;
-      }
-
-      @media screen and (max-width: 1540px) {
-        margin-top: 0;
-      }
-    }
+  @media screen and (max-width: 1540px) {
+    margin-top: 0;
   }
 }
 

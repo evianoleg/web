@@ -1,20 +1,19 @@
-input {
-  border: 1px solid;
-  border-color: #b9b8bd;
+input,
+textarea {
+  border-color: #323232 !important;
   box-shadow: none;
   padding: 13px 7px;
-  border-radius: 4px;
   width: 100%;
   position: relative;
-
-  &::placeholder {
-    font-size: 1.19em;
-    line-height: 100%;
-    color: #aaa;
-  }
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid;
+  transition: all .2s ease-in-out;
+  color: #f3f3f3;
+  font-size: 1.2em;
 
   &:focus,
   &:hover {
-    border-color: $accent-color;
+    border-color: $accent-color !important;
   }
 }
