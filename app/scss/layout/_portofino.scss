@@ -1,0 +1,116 @@
+section.portofino {
+  @media screen and (max-width: 1000px) {
+    .sidemenu {
+      display: none;
+    }
+
+    .tab {
+      text-align: left;
+    }
+
+    .side2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.portitem {
+  width: 100%;
+  max-width: 405px;
+  text-align: right;
+  margin-right: 20px;
+  padding-right: 80px;
+  position: relative;
+
+  @media screen and (max-height: 783px), screen and (max-width: 1367px) {
+    text-align: center;
+  }
+
+   @media screen and (max-width: 1000px) {
+    padding-right: 0;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 680px) {
+    text-align: left;
+  }
+
+  &::after {
+    content: '';
+    right: 60px;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(#fff, .4);
+    position: absolute;
+    top: 0;
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__date {
+    position: absolute;
+    right: calc(-100% + 5px);
+    top: 0;
+    font-size: 3em;
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    line-height: 0;
+    font-family: $ff-ultralight;
+    letter-spacing: 12px;
+    
+    span {
+      display: block;
+      white-space: nowrap;
+    }
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    } 
+  }
+
+  &__name {
+    color: #c3c3c3 !important;    
+    padding: 0 !important;
+    text-transform: uppercase;
+    font-size: 3em !important;
+    letter-spacing: 4px;
+    font-family: $ff-light !important;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 2.3em !important;
+    }
+  }
+
+  p {
+    padding: 10px 0 !important;
+    color: #555;
+  }
+
+  &__img {
+    img {
+      width: auto;
+      height: 450px;
+
+      @media screen and (max-height: 783px) {
+        height: 350px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      @media screen and (max-height: 676px) {
+        height: 300px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        height: auto;
+        width: 100%;
+        max-width: 560px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

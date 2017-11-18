@@ -1,8 +1,10 @@
-section.contacts {
+section.contacts,
+section.portofino {
   display: flex;
 }
 
-aside.contacts {
+aside.contacts,
+aside.portofino {
   order: 1;
   flex: 1 0 50%;
 
@@ -57,13 +59,22 @@ aside.contacts {
     width: 100%;
 
     @media screen and (min-width: 1001px) {
-      margin-top: 20px !important;
+      margin-top: 20px;
       padding: 15px 0 20px !important;
     }
 
     @media screen and (max-width: 1000px) {
       text-align: center;
       margin: 20px 0;    
+    }
+
+    @media screen and (max-height: 683px) {
+      margin-top: 0;
+      padding-top: 0 !important;
+
+      span.desc {
+        display: none;
+      }
     }
 
     img {
