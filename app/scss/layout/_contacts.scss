@@ -156,6 +156,18 @@ aside.contacts {
       font-family: $ff-bold;
     }
 
+    a.send {
+      text-transform: uppercase;
+      color: #f3f3f3;
+      display: block;
+      text-align: right;
+      font-size: 1.15em;
+      letter-spacing: 4px;
+      width: 100px;
+      margin: 0 0 0 auto; 
+      margin-top: 25px;
+    }
+
     textarea {
       height: 200px;
 

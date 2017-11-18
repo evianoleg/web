@@ -29,11 +29,21 @@ $(function(){
  	});
 	/* placeholder*/
 
-	$('.button-nav').click(function(){
-		$(this).toggleClass('active'), 
-		$('.main-nav-list').slideToggle(); 
-		return false;
-	});
+	var makeOrder_btn = $('.makeorder_btn', '.main-wrapper');
+	var makeOrder = $('#makeorder');
+	var mainWrapper = $('.main-wrapper');
+
+	$(makeOrder_btn).click(function() {
+		$('#makeorder').addClass('show');
+		$(mainWrapper).addClass('blur');
+	})
+
+	$('.close', makeOrder).click(function () {
+		$('#makeorder').removeClass('show');
+		$(mainWrapper).removeClass('blur');
+	})
+
+
 	
 	/* components */
 

@@ -1,0 +1,68 @@
+.blur {
+  filter: blur(3px);
+}
+
+#makeorder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.9);
+  z-index: 10000;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-in-out;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 2.3em;
+  }
+
+  .contactform__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 520px;
+
+    @media screen and (max-width: 530px) {
+      padding: 0 20px;
+    }
+  }
+
+  .close {
+    font-family: $ff-ultralight;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    font-size: 2.3em;
+    cursor: pointer;
+    display: block;
+    transform: translate(-50%, 0);
+    transition: all .3s ease;
+
+    &:hover {
+      font-family: $ff-light;
+    }
+
+    &::after {
+      bottom: -65px;
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      height: 63px;
+      background-color: #fff;
+    }
+  }
+}
