@@ -1,3 +1,11 @@
+section.production {
+  display: flex;
+
+  aside.production {
+    order: 1;
+  }
+}
+
 .tab {
   &__title {
     text-transform: uppercase;
@@ -59,21 +67,29 @@
   }
 }
 
-
 .tabimgs {
-  position: absolute;
-  right: 83px;
-  height: 100%;
-  max-height: 800px;
-  align-items: center;
+  order: 2;
+  position: relative; //right: 83px;
+  //height: 100%;
+  //max-height: 800px;
+  //align-items: center;
   width: calc(100% - 900px);
   justify-content: center;
-  top: 143px;
+  margin-right: 140px; //top: 143px;
+
+  @media screen and (max-width: 1260px) {
+    margin-right: 83px;
+  }
+
+  @media screen and (max-width: 1640px) {
+    top: 0;
+  }
 
   display: none;
 
   @media screen and (min-width: 1001px) {
     display: flex;
+    flex-shrink: .8;
   }
 
   @media screen and (max-width: 1300px) {
@@ -87,9 +103,30 @@
   position: relative;
 
   @media screen and (max-width: 1640px) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 1640px) {
     .tabimg__title,
-    .btn {
+    {
       display: none;
+    }
+  }
+
+  .tabimg__img {
+    img {
+      display: block;
+      padding: 0 30px;
+
+      @media screen and (max-width: 1260px) {
+        display: none;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 1640px) {
+        width: 300px;
+      }
     }
   }
 
@@ -104,9 +141,43 @@
       top: 45%;
     }
 
-    .btn {
-      top: 63%;
-      right: 105px;
+    .forbtn {
+      text-align: center;
+
+      @media screen and (max-width: 1260px) {
+        margin-top: 50%;
+      }
+
+      h2,
+      h4 {
+        text-align: left;
+        @media screen and (min-width: 1641px) {
+          display: none;
+        }
+      }
+
+      h2 {
+        text-transform: uppercase;
+        font-size: 3.5em !important;
+        letter-spacing: 3px;
+        font-family: $ff-bold;
+      }
+
+      h4 {
+        text-transform: uppercase;
+        font-size: 1.8em;
+        font-family: $ff-light;
+      }
+
+      .btn {
+        margin-top: 30px;
+
+        @media screen and (min-width: 1641px) {
+          top: 63% !important;
+          right: 105px !important;
+          position: absolute;
+        }
+      }
     }
 
     @media screen and (max-width: 1640px) {
@@ -119,14 +190,6 @@
 
       .tabimg__decoration {
         display: none;
-      }
-    }
-
-    @media screen and (max-width: 1400px) {
-      .tabimg__img {
-        img {
-          width: 80%;
-        }
       }
     }
   }
