@@ -12,6 +12,16 @@
     align-items: flex-start;
   }
 
+  &.home {
+    flex-direction: column;
+    padding-bottom: 30px;
+
+    aside {
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+  }
+
   aside {
     height: inherit;
     width: 100%;
@@ -25,7 +35,7 @@
     }
 
     @media screen and (min-width: 1001px) {
-      width: 570px;
+      width: 310px;
       margin: 0 0 0 auto;
       max-width: 445px;
       padding: 0;
@@ -249,7 +259,6 @@
 
 .tumb {
   position: relative;
-  margin-top: 105px;
   transition: all .2s ease-in-out;
 
   @media screen and (min-width: 1001px) {
@@ -300,6 +309,10 @@
       letter-spacing: auto !important;
     }
 
+    @media screen and (max-height: 690px) {
+      font-size: 1.3em !important;
+    }
+
     font-size: 3.7em !important;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -317,7 +330,13 @@
       width: 195px;
     }
 
-    width: 100%;
+    @media screen and (max-height: 690px) {
+      width: 160px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 100% !important;
+    }
   }
 
   &__desc {
