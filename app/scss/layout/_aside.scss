@@ -19,6 +19,7 @@
     aside {
       flex-grow: 1;
       justify-content: space-between;
+      width: 310px;
     }
   }
 
@@ -35,7 +36,7 @@
     }
 
     @media screen and (min-width: 1001px) {
-      width: 310px;
+      //width: 310px;
       margin: 0 0 0 auto;
       max-width: 445px;
       padding: 0;
