@@ -23,6 +23,7 @@
 @import "layout/portofino";
 @import "layout/contacts";
 @import "layout/aboutus";
+@import "layout/portfolio";
 @import "layout/media";
 @import "layout/makeorder";
 
@@ -39,6 +40,14 @@
   }
 }
 
-body[role=aboutus] {
-  //overflow-y: hidden; 
+.desc-text {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.mob-text {
+  @media screen and (min-width: 1001px) {
+    display: none;
+  }
 }

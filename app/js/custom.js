@@ -47,17 +47,19 @@ $(function(){
 	
 	/* components */
 
+	// if($('.portslider').length) {
+	// 	$('.portslider').slick({
+	// 		dots: false,
+	// 		infinite: true,
+	// 		speed: 300,
+	// 		slidesToShow: 1,
+	// 		slidesToScroll: 1,
+	// 		arrows: false
+	// 	});
+	// };
 
 	/*
-	if($('.slick-slider').length) {
-		$('.slick-slider').slick({
-			dots: true,
-			infinite: false,
-			speed: 300,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-		});
-	};
+	
 
 	if($('.styled').length) {
 		$('.styled').styler();

@@ -9,40 +9,21 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
-<body class="loaded" role="projects">
+<body class="loaded" role="portfolio">
   <!-- BEGIN BODY -->
   <div class="main-wrapper">
     <div class="sideline__right"></div>
     <span class="pagename">
-      <img src="img/pagename_production.png" alt="Production">
+      <img src="img/portofino.png" alt="Production">
     </span>
     <div class="layer-2 nothome">
       <div class="side-logo">
         <div class="logo"><span><img src="img/side_logo.png" alt=""></span></div>
       </div>
-
       <div class="tabtitle-lefted web">
         <span>
           <img src="img/production/webdev-lefted.png" alt="Web Development">
         </span>
-      </div>
-    </div>
-    <div class="tabimgs">
-      <div class="tabimg web">
-        <span class="tabimg__img"><img src="img/production/web.png" alt="Web Production"></span>
-        <span class="tabimg__code">
-         <img src="img/production/web-code.png" alt="Web Production">
-        </span>
-        <span class="tabimg__decoration">
-          <img src="img/production/web-decoration.png" alt="Web Decoration">
-        </span>
-        <div class="tabimg__title">
-          <h2>Create</h2>
-          <h4 class="subtitle">
-            A new website
-          </h4>
-        </div>
-        <a href="#order" class="btn makeorder_btn">Make order</a>
       </div>
     </div>
     <!-- BEGIN HEADER -->
@@ -63,11 +44,11 @@
       </span>
     </header>
     <!-- HEADER EOF   -->
-    <section class="sidebar nothome">
-      <aside class="content production" role="main">
+    <section class="sidebar col nothome">
+      <aside class="content aboutus" role="main">
         <div class="sidetitle">
-          <h2>Production</h2>
-          <h4 class="subtitle">Company</h4>
+          <h2>Portfolio</h2>
+          <h4 class="subtitle">Web development</h4>
         </div>
         <div class="sidemenu">
           <ul>
@@ -81,32 +62,36 @@
             <li data-tab="3d"><a href="">3 D</a></li>
           </ul>
         </div>
-        <div class="tabs">
-          <div class="tab web">
-            <div class="text">
-            <div class="mobileimg">
-              <img src="img/production/webmob.png" alt="">
-              <a href="#" class="btn mobile">Make order</a>
-            </div>
-            <h3 class="tab__title">web development</h3>
-            <h4 class="tab__text">
-              <p class="tab__text-title">Sed finibus molestie ultrices.</p>
-              <p class="tab__text-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod nulla vitae sem blandit, id interdum magna porttitor. Nulla egestas vitae ante id tempor. Sed finibus molestie ultrices. Pellentesque nunc justo, vestibulum et vulputate vitae. Mauris sollicitudin pretium blandit. Morbi nisl massa, volutpat ac magna vitae, maximus tincidunt erat. Nunc massa est, malesuada non ex sit amet, faucibus convallis antorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Nam euismod nulla vitae sem blandit, id interdum magna porttitor. Nulla egestas vitae ante id tempor. tudin pretium blandit. Morbi nisl massa, volutpat ac magna vitae, maximus tincidunt erat. Nunc massa est
-              </p>
-            </h4>
-            </div>
-            <div class="tab__links">
-              <a href="portfolio.html">Portfolio</a>
-              <a href="portofino.html">Read me</a>
-            </div>
-          </div>
-          <div class="makeorder">
-            <a href="#order" class="btn makeorder_btn">Make order</a>
-          </div>
-        </div>
       </aside>
+      <div class="portslider">
+        <div class="portslider__item">
+          <div class="smalltext">
+            <p class="desc-text">
+              <span>Lorem ipsum</span> dolor sit amet,
+              <br> consectetur adipiscing elit.
+            </p>
+            <p class="mob-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod nulla vitae sem blandit, id interdum magna porttitor. </p>
+          </div>
+          <div class="img"><img src="img/portfolio/portimg.jpg" alt="port"></div>
+          <div class="desc">
+            <h3>portofino</h3>
+            <p class="subtitle">beach resort</p>
+            <div class="blocks">
+              <span>Lorem ipsum <br>dolor sit</span>
+              <span>Lorem ipsum <br>dolor sit</span>
+              <span>Lorem ipsum <br>dolor sit</span>
+            </div>
+          </div>
+          <a href="#" class="viewmore">View more</a>
+        </div>
+      </div>
+      <div class="years">
+        <a href="#" data-year="2017">2017</a>
+        <a href="#" data-year="2016">2016</a>
+        <a href="#" data-year="2015">2015</a>
+        <a href="#" data-year="2014">2014</a>
+      </div>
     </section>
     <!-- BEGIN FOOTER -->
     <footer>
@@ -116,8 +101,8 @@
         </div>
         <nav>
           <a href="index.html"><span>Home</span></a>
-          <a href="production.html" class="active"><span>Projects</span></a>
-          <a href="aboutus.html"><span>About us</span></a>
+          <a href="production.html"><span>Projects</span></a>
+          <a href="aboutus.html" class="active"><span>About us</span></a>
           <a href="contacts.html"><span>Contacts</span></a>
         </nav>
       </div>
@@ -146,16 +131,16 @@
         <a href="#" class="send">Send</a>
       </form>
     </div>
-
     <div class="close">
       <span>X</span>
     </div>
+  </div>
   </div>
   <div class="icon-load"></div>
   <!-- BODY EOF   -->
   <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
   <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
-  <!-- <script type="text/javascript" src="js/components/slick.js" ></script> -->
+  <script type="text/javascript" src="js/components/slick.js"></script>
   <!--
   <script type="text/javascript" src="js/components/jquery.fancybox.js" ></script>
   <script type="text/javascript" src="js/components/jquery.formstyler.js" ></script>
